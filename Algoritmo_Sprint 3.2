@@ -1,0 +1,65 @@
+ALGORITMO
+
+INICIO
+
+    // Definimos tipo de datos
+
+    // Leer datos del usuario
+    IMPRIMIR "Num. de registre del nen: "
+    LEER kidInscription : ENTERO
+
+    IMPRIMIR "Té algun germà al centre (0:no / 1:si): "
+    LEER brother : ENTERO
+
+    IMPRIMIR "Viu a la zona de l'escola (0:no / 1:si): "
+    LEER samePoblation : ENTERO
+
+    IMPRIMIR "El pare o mare treballa a la zona de l'escola (0:no / 1:si): "
+    LEER jobPoblation : ENTERO
+
+    IMPRIMIR "Té alguna discapacitat igual o superior al 33% o malaltia crònica (0:no / 1:si): "
+    LEER disability : ENTERO
+
+    IMPRIMIR "La familia del nen es nombrosa (0:no / 1:si): "
+    LEER bigFamily : ENTERO
+
+    IMPRIMIR "Algun familiar o tutor legal que ha estat escolaritzat a la mateixa escola (0:no / 1:si): "
+    LEER pastSchoolMembers : ENTERO
+
+    // Asignar puntos
+    SI brother == 1 ENTONCES
+        brother ← 40
+    FIN SI
+
+    SI samePoblation == 1 ENTONCES
+        samePoblation ← 30
+    FIN SI
+
+    SI jobPoblation == 1 ENTONCES
+        jobPoblation ← 20
+    FIN SI
+
+    SI disability == 1 ENTONCES
+        disability ← 10
+    FIN SI
+
+    SI bigFamily == 1 ENTONCES
+        bigFamily ← 15
+    FIN SI
+
+    SI pastSchoolMembers == 1 ENTONCES
+        pastSchoolMembers ← 5
+    FIN SI
+
+    // Comparar si vive en la misma zona o si alguno de los padres trabaja en la zona para elegir el que de más puntuación
+    SI samePoblation > jobPoblation ENTONCES
+        jobPoblation ← 0
+    FIN SI
+
+    // Sumar los puntos totales
+    suma ← brother + samePoblation + jobPoblation + disability + bigFamily + pastSchoolMembers
+
+    // Mostrar el resultado final
+    IMPRIMIR "El nen amb el número ", kidInscription, " té ", suma, " punts"
+
+FIN
