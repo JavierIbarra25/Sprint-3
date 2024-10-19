@@ -1,5 +1,5 @@
 import java.util.Scanner; 
-public class IbarraC {
+public class IbarraC_Sprint3_1 {
     public static void main(String[] args) {
 
         double llarg = 300.3;
