@@ -3,28 +3,30 @@ ALGORITMO
 INICIO
 
     // Definimos tipo de datos
-
+    
+    kidInscription, brother, samePoblation, jobPoblation, disability, bigFamiliy, pastSchoolMembers : ENTERO
+    
     // Leer datos del usuario
     IMPRIMIR "Num. de registre del nen: "
-    LEER kidInscription : ENTERO
+    LEER kidInscription 
 
     IMPRIMIR "Té algun germà al centre (0:no / 1:si): "
-    LEER brother : ENTERO
+    LEER brother 
 
     IMPRIMIR "Viu a la zona de l'escola (0:no / 1:si): "
-    LEER samePoblation : ENTERO
+    LEER samePoblation 
 
     IMPRIMIR "El pare o mare treballa a la zona de l'escola (0:no / 1:si): "
-    LEER jobPoblation : ENTERO
+    LEER jobPoblation
 
     IMPRIMIR "Té alguna discapacitat igual o superior al 33% o malaltia crònica (0:no / 1:si): "
-    LEER disability : ENTERO
+    LEER disability 
 
     IMPRIMIR "La familia del nen es nombrosa (0:no / 1:si): "
-    LEER bigFamily : ENTERO
+    LEER bigFamily 
 
     IMPRIMIR "Algun familiar o tutor legal que ha estat escolaritzat a la mateixa escola (0:no / 1:si): "
-    LEER pastSchoolMembers : ENTERO
+    LEER pastSchoolMembers 
 
     // Asignar puntos
     SI brother == 1 ENTONCES
